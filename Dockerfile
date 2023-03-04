@@ -35,8 +35,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/pyenv/pyenv.git /root/.pyenv && \
     echo 'export PYENV_ROOT="/root/.pyenv"' >> /root/.bashrc && \
     echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> /root/.bashrc && \
-    echo 'eval "$(pyenv init -)"' >> /root/.bashrc && \
-    echo 'export PS1=\h:\w\$' >> /root/.bashrc
+    echo 'eval "$(pyenv init -)"' >> /root/.bashrc
 
 WORKDIR /workspace
 RUN chmod 777 /workspace
